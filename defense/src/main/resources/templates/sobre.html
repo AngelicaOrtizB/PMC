@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFENSE - Sobre nosotros</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2a465e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sidebar h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            font-size: 1.8em;
+            text-decoration: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .alerta-button {
+            padding: 10px 15px;
+            background-color: white;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+        }
+
+        .alerta-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        .container {
+            flex: 1;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            overflow-y: auto;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        hr {
+            width: 100%;
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        /*no tengo idea de como poner el style en otro lado ---buscar */
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/">DEFENSE</a>
+        <p>Protector Contra Fraudes</p>
+        <button class="alerta-button">Comenzar Conversación con Luis Alerta</button>
+    </div>
+    <div class="container">
+        <h2>Sobre Defense: ¿Qué es?, ¿Para qué es?, ¿Qué problema estamos resolviendo?</h2>
+
+        <h3>¿Qué es Defense?</h3>
+        <p>Defense es una plataforma diseñada para protegerte de fraudes electrónicos. Utilizamos tecnología avanzada de detección y prevención para ayudar a las personas más vulnerables, como adultos mayores y preadolescentes, a identificar y evitar amenazas digitales. Nuestro objetivo es educar, alertar y proteger.</p>
+        <hr>
+
+        <h3>¿Para qué sirve Defense?</h3>
+        <p>Con Defense, puedes estar tranquilo sabiendo que estás protegido contra intentos de fraude y otras estafas en línea. Te ofrecemos consejos prácticos, información sobre el tema, testimonios de personas que han pasado por esto y un chatbot interactivo que te ayuda a identificar actividades sospechosas en tiempo real.</p>
+        <hr>
+
+        <h3>¿Qué problema estamos resolviendo?</h3>
+        <p>En un mundo cada vez más digital, las estafas y fraudes electrónicos están aumentando rápidamente, afectando a personas vulnerables como adultos mayores, preadolescentes y usuarios poco familiarizados con la tecnología. Defense nace con la misión de resolver este problema de manera efectiva, mediante la detección, alerta y educación.</p>
+    </div>
+</body>
+</html>

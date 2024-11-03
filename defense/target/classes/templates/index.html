@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFENSE - Protección contra fraudes</title>
+    <style>
+        /*no tengo idea de como poner el style en otro lado ---buscar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 1400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #2a465e;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+        }
+
+        .sidebar h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        
+        .alerta-button {
+            padding: 10px 15px;
+            background-color: white;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+        }
+
+        .alerta-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .content {
+            width: 70%;
+            padding: 40px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow-y: auto;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .button-group button,
+        .button-group a {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.3s ease;
+            text-decoration: none; /* Para los enlaces */
+        }
+
+        .button-group button:hover,
+        .button-group a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>DEFENSE</h1>
+            <p>Protector Contra Fraudes</p>
+            <button class="alerta-button">Comenzar Conversación con Luis Alerta</button>
+        </div>
+        <div class="content">
+            <h2>¿Cómo podemos protegerte?</h2>
+            <p>Defense protege tu información y te ayuda a evitar fraudes electrónicos.</p>
+            <div class="button-group">
+                <a href="/sobre">🔍 Sobre defense: ¿Qué es?, ¿Para qué es?</a>
+                <button onclick="location.href='#'">🔒 Protección contra fraudes</button>
+                <button onclick="location.href='#'">⚠️ Conoce los tipos de fraudes más comunes</button>
+                <button onclick="location.href='#'">📢 Testimonios de personas que han sido víctimas</button>
+                <button onclick="location.href='#'">👤 Conoce a Luis Alerta</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
