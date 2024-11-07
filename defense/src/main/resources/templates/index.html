@@ -31,6 +31,8 @@
         }
 
         .sidebar {
+            font-size: 1.5em; /* Ajusta el tamaño de fuente */
+            margin-top: 13px;
             width: 30%;
             background-color: #2a465e;
             color: white;
@@ -48,7 +50,8 @@
 
         
         .alerta-button {
-            padding: 10px 15px;
+            margin-top: 18px;
+            padding: 15px 20px;
             background-color: white;
             color: #007bff;
             border: none;
@@ -71,26 +74,29 @@
             flex-direction: column;
             align-items: flex-start;
             overflow-y: auto;
+            gap: 25px;
+            font-size: 1.5em;
         }
 
         .button-group {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            align-items: center; /* Centra los botones horizontalmente */
+            gap: 25px; /* Espacio entre botones */
             width: 100%;
         }
 
         .button-group button,
         .button-group a {
-            width: 100%;
+            width: 70%;
             padding: 15px;
             border: none;
-            background-color: #007bff;
+            background-color: #2a465e;
             color: white;
-            font-size: 1em;
-            border-radius: 5px;
+            font-size: 1.5em;
+            border-radius: 15px;
             cursor: pointer;
-            text-align: left;
+            text-align: center;
             transition: background 0.3s ease;
             text-decoration: none; /* Para los enlaces */
         }
@@ -106,14 +112,14 @@
         <div class="sidebar">
             <h1>DEFENSE</h1>
             <p>Protector Contra Fraudes</p>
-            <button class="alerta-button">Comenzar Conversación con Luis Alerta</button>
+            <button class="alerta-button">Comenzar Conversación con Luis Alerta 👤</button>
         </div>
         <div class="content">
             <h2>¿Cómo podemos protegerte?</h2>
             <p>Defense protege tu información y te ayuda a evitar fraudes electrónicos.</p>
             <div class="button-group">
                 <a href="/sobre">🔍 Sobre defense: ¿Qué es?, ¿Para qué es?</a>
-                <button onclick="location.href='#'">🔒 Protección contra fraudes</button>
+                <a href="/proteccion">🔒 Protección contra fraudes</a>
                 <button onclick="location.href='#'">⚠️ Conoce los tipos de fraudes más comunes</button>
                 <button onclick="location.href='#'">📢 Testimonios de personas que han sido víctimas</button>
                 <button onclick="location.href='#'">👤 Conoce a Luis Alerta</button>
