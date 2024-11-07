@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFENSE - Protección contra Fraudes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2a465e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .sidebar a {
+            font-size: 1.8em;
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sidebar p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .alerta-button {
+            padding: 10px 15px;
+            background-color: white;
+            color: #2a465e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+        }
+        .alerta-button:hover {
+            background-color: #1e3a50;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .content h2 {
+            font-size: 1.5em;
+            color: #2a465e;
+            background-color: #dbe7ef;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .advice {
+            width: 100%;
+            max-width: 800px;
+            background-color: #e6f1fb;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+        .advice-icon {
+            font-size: 1.5em;
+            color: #2a465e;
+        }
+        .advice-text {
+            font-size: 1em;
+            color: #333;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/">DEFENSE</a>
+        <p>Comenzar Conversación con Luis Alerta</p>
+        <button class="alerta-button">Luis Alerta</button>
+    </div>
+    <div class="content">
+        <h2><span class="advice-icon">🔒</span>Protección contra fraudes: Consejos para evitar ser víctima de fraudes electrónicos.</h2>
+
+        <div class="advice">
+            <span class="advice-icon">📂</span>
+            <div class="advice-text">1. Guarda tus datos en un lugar seguro: Utiliza almacenamiento en la nube con un gestor de contraseñas para proteger tu información sensible.</div>
+        </div>
+
+        <div class="advice">
+            <span class="advice-icon">👤</span>
+            <div class="advice-text">2. Protege tus cuentas en línea: Usa contraseñas fuertes, únicas y autenticación multifactor para asegurar tus cuentas y evitar fraudes.</div>
+        </div>
+
+        <div class="advice">
+            <span class="advice-icon">🔍</span>
+            <div class="advice-text">3. Limpia tu huella digital: Elimina cuentas antiguas, ajusta la privacidad de redes sociales y borra datos personales de sitios de búsqueda.</div>
+        </div>
+
+        <div class="advice">
+            <span class="advice-icon">📧</span>
+            <div class="advice-text">4. Detecta fraudes de phishing: Identifica señales de estafas, como urgencia, ofertas sospechosas y solicitudes de información personal.</div>
+        </div>
+
+        <div class="advice">
+            <span class="advice-icon">💳</span>
+            <div class="advice-text">5. No almacenes la información de tu tarjeta de crédito en sitios web: Evita guardar datos de tarjetas en sitios de compras para prevenir fraudes.</div>
+        </div>
+
+        <div class="advice">
+            <span class="advice-icon">🔐</span>
+            <div class="advice-text">6. No compartas información confidencial de forma insegura: Usa un gestor de contraseñas con cifrado al compartir información sensible.</div>
+        </div>
+    </div>
+</body>
+</html>

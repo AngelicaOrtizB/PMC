@@ -15,6 +15,12 @@ public class HomeController {
     public String sobre() {
         return "sobre";
     }
+
+    @GetMapping("/proteccion")
+    public String proteccion() {
+        return "proteccion";
+    }
 }
+
 
 
