@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DefenseApplication<defense>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.intento.defense.DefenseApplication",
+            "projectName": "defense",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
