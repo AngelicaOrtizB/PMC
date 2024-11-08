@@ -20,6 +20,11 @@ public class HomeController {
     public String proteccion() {
         return "proteccion";
     }
+
+    @GetMapping("/tipos")
+    public String tipos() {
+        return "tipos";
+    }
 }
 
 

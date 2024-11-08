@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFENSE - Tipos de Fraudes</title>
+    <style>
+     * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2a465e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sidebar h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            font-size: 1.8em;
+            text-decoration: none;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .alerta-button {
+            padding: 10px 15px;
+            background-color: white;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+        }
+
+        .alerta-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        
+        .container {
+            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #2a465e;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            max-width: 400px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .card img {
+            width: 60px;
+            height: 60px;
+        }
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #2d5a65;
+            font-size: 1.1em;
+        }
+        .card p {
+            margin: 0;
+            color: #333;
+            font-size: 0.9em;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/">DEFENSE</a>
+        <p>Protector Contra Fraudes</p>
+        <button class="alerta-button">Comenzar Conversación con Luis Alerta 👤</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2>Conoce los tipos de fraudes más comunes</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                
+                <div>
+                    <h3>Phishing</h3>
+                    <p>Engaños por medio de correos electrónicos o mensajes de texto que parecen provenir de instituciones legítimas para obtener información personal como contraseñas o datos bancarios.</p>
+                </div>
+                <img src="phishing-icon.png" alt="Phishing">
+            </div>
+            <div class="card">
+                
+                <div>
+                    <h3>Robo de identidad</h3>
+                    <p>Alguien obtiene y utiliza información personal sin autorización para acceder a cuentas bancarias.</p>
+                </div>
+                <img src="identity-theft-icon.png" alt="Robo de identidad">
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Fraude con tarjetas de crédito</h3>
+                    <p>Uso no autorizado de datos de tarjetas de crédito para realizar compras o transferencias sin el consentimiento del titular.</p>
+                </div>
+                <img src="credit-fraud-icon.png" alt="Fraude con tarjetas">
+
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Fraude en compras en línea</h3>
+                    <p>Venta de productos que no existen o que no se entregan después de que la víctima ha pagado.</p>
+                </div>
+                <img src="online-shopping-fraud-icon.png" alt="Fraude en compras en línea">
+
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Estafas de inversiones</h3>
+                    <p>Ofrecimiento de inversiones con altas ganancias y poco riesgo, que en realidad son esquemas piramidales o Ponzi, donde los fondos de los nuevos inversores pagan a los anteriores.</p>
+                </div>
+                <img src="investment-scam-icon.png" alt="Estafas de inversiones">
+
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Estafas en servicios técnicos</h3>
+                    <p>Falsos técnicos que aseguran problemas con tu computadora y piden instalar software malicioso.</p>
+                </div>
+                <img src="technical-support-scam-icon.png" alt="Estafas en servicios técnicos">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
