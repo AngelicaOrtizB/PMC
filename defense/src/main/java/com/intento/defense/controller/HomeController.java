@@ -25,6 +25,11 @@ public class HomeController {
     public String tipos() {
         return "tipos";
     }
+
+    @GetMapping("/testimonios")
+    public String testimonios() {
+        return "testimonios";
+    }
 }
 
 
