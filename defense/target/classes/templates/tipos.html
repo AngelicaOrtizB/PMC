@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEFENSE - Tipos de Fraudes</title>
     <style>
-     * {
+        * {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -24,7 +24,6 @@
             align-items: center;
             padding: 20px;
         }
-
         .sidebar h1 {
             font-size: 1.8em;
             margin-bottom: 10px;
@@ -36,14 +35,12 @@
             margin-bottom: 10px;
             cursor: pointer;
         }
-
         .sidebar p {
             font-size: 1em;
             margin-bottom: 20px;
             text-align: center;
             color: white;
         }
-
         .alerta-button {
             padding: 10px 15px;
             background-color: white;
@@ -54,12 +51,10 @@
             transition: background-color 0.3s ease;
             font-size: 1em;
         }
-
         .alerta-button:hover {
             background-color:#2d5a65;
             color: white;
         }
-        
         .container {
             width: 90%;
             background-color: #fff;
@@ -91,6 +86,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            cursor: pointer;
         }
         .card img {
             width: 170px;
@@ -107,9 +103,58 @@
             font-size: 0.9em;
             text-align: justify;
         }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+        }
+        .info-card {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #e0f4ff;
+            border-radius: 8px;
+            padding: 20px;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .info-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #2a465e;
+        }
+        .info-card p {
+            font-size: 1em;
+            color: #333;
+        }
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            color: #2a465e;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: 1fr;
+            }
+            .info-card {
+                width: 90%;
+                top: auto;
+                bottom: 20px;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     </style>
@@ -125,55 +170,105 @@
             <h2>Conoce los tipos de fraudes más comunes</h2>
         </div>
         <div class="grid">
-            <div class="card">
-                
+            <div class="card" onclick="showInfo(1)">
                 <div>
                     <h3>Phishing</h3>
-                    <p>Engaños por medio de correos electrónicos o mensajes de texto que parecen provenir de instituciones legítimas para obtener información personal como contraseñas o datos bancarios.</p>
+                    <p>Engaños por medio de correos electrónicos o mensajes de texto que parecen provenir de instituciones legítimas para obtener información personal.</p>
                 </div>
                 <img src="/images/pescao.png" alt="Phishing">
             </div>
-            <div class="card">
-                
+            <div class="card" onclick="showInfo(2)">
                 <div>
                     <h3>Robo de identidad</h3>
-                    <p>Cuando alguien obtiene y utiliza información personal sin autorización para acceder a cuentas bancarias, solicitar préstamos o hacer compras.</p>
+                    <p>Obtención y uso no autorizado de información personal para acceder a cuentas bancarias, solicitar préstamos o hacer compras.</p>
                 </div>
                 <img src="/images/identidad.png" alt="Robo de identidad">
             </div>
-            <div class="card">
+            <div class="card" onclick="showInfo(3)">
                 <div>
                     <h3>Fraude con tarjetas de crédito</h3>
                     <p>Uso no autorizado de datos de tarjetas de crédito para realizar compras o transferencias sin el consentimiento del titular.</p>
                 </div>
                 <img src="/images/tarjetas.png" alt="Fraude con tarjetas">
-
             </div>
-            <div class="card">
+            <div class="card" onclick="showInfo(4)">
                 <div>
                     <h3>Fraude en compras en línea</h3>
-                    <p>Venta de productos que no existen o que no se entregan después de que la víctima ha pagado en plataformas de comercio electrónico o redes sociales.</p>
+                    <p>Venta de productos inexistentes o que no se entregan después de haber recibido el pago en plataformas de comercio electrónico.</p>
                 </div>
                 <img src="/images/linea.png" alt="Fraude en compras en línea">
-
             </div>
-            <div class="card">
+            <div class="card" onclick="showInfo(5)">
                 <div>
                     <h3>Estafas de inversiones</h3>
-                    <p>Ofrecimiento de inversiones con altas ganancias y poco riesgo, que en realidad son esquemas piramidales o Ponzi, donde los fondos de los nuevos inversores pagan a los anteriores.</p>
+                    <p>Ofrecimiento de inversiones con altas ganancias y bajo riesgo que son en realidad esquemas Ponzi o piramidales.</p>
                 </div>
                 <img src="/images/inversiones.png" alt="Estafas de inversiones">
-
             </div>
-            <div class="card">
+            <div class="card" onclick="showInfo(6)">
                 <div>
                     <h3>Estafas en servicios técnicos</h3>
-                    <p>Falsos técnicos que aseguran que hay problemas con tu computadora o dispositivo y te piden instalar software malicioso o pagar por reparaciones inexistentes.</p>
+                    <p>Falsos técnicos que aseguran problemas en tus dispositivos y piden instalar software malicioso o pagar por reparaciones inexistentes.</p>
                 </div>
                 <img src="/images/servicios.png" alt="Estafas en servicios técnicos">
-
             </div>
         </div>
     </div>
+
+    <div class="overlay" id="overlay" onclick="hideInfo()"></div>
+    
+    <div class="info-card" id="infoCard">
+        <button class="close-button" onclick="hideInfo()">✖</button>
+        <h3 id="infoTitle"></h3>
+        <p id="infoContent"></p>
+    </div>
+
+    <script>
+        function showInfo(id) {
+            const infoCard = document.getElementById('infoCard');
+            const overlay = document.getElementById('overlay');
+            const infoTitle = document.getElementById('infoTitle');
+            const infoContent = document.getElementById('infoContent');
+            
+            const infoData = {
+                1: {
+                    title: "Phishing",
+                    content: "Evita hacer clic en enlaces sospechosos. Verifica la autenticidad de correos y mensajes antes de proporcionar información personal."
+                },
+                2: {
+                    title: "Robo de identidad",
+                    content: "No compartas datos personales públicamente. Usa contraseñas fuertes y monitorea tus estados de cuenta bancarios regularmente."
+                },
+                3: {
+                    title: "Fraude con tarjetas de crédito",
+                    content: "Nunca guardes los datos de tu tarjeta en sitios de compras. Usa métodos de pago seguros y activa alertas en tu banco."
+                },
+                4: {
+                    title: "Fraude en compras en línea",
+                    content: "Compra solo en sitios web de confianza y revisa las opiniones de otros usuarios antes de hacer una compra."
+                },
+                5: {
+                    title: "Estafas de inversiones",
+                    content: "Desconfía de inversiones con promesas de alta rentabilidad. Investiga bien antes de invertir tu dinero."
+                },
+                6: {
+                    title: "Estafas en servicios técnicos",
+                    content: "No permitas accesos remotos a tu computadora si no estás seguro de la procedencia del técnico. Asegúrate de que el servicio sea legítimo."
+                }
+            };
+            
+            const info = infoData[id];
+            infoTitle.textContent = info.title;
+            infoContent.textContent = info.content;
+            
+            infoCard.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function hideInfo() {
+            document.getElementById('infoCard').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
