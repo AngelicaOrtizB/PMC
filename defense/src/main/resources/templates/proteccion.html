@@ -258,7 +258,6 @@
             infoTitle.textContent = selectedInfo.title;
             infoContent.textContent = selectedInfo.content;
 
-            // Generar los enlaces para las aplicaciones
             appLinks.innerHTML = selectedInfo.apps.map(app => `<a href="${app.url}" class="app-link" target="_blank">${app.name}</a>`).join(", ");
             
             infoCard.style.display = 'block';
