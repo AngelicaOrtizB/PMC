@@ -58,6 +58,7 @@
             flex-direction: column;
             align-items: center;
             overflow-y: auto;
+            position: relative;
         }
         .content h2 {
             font-size: 1.5em;
@@ -83,6 +84,7 @@
             align-items: center;
             margin-bottom: 10px;
             gap: 10px;
+            cursor: pointer;
         }
         .advice-icon {
             font-size: 1.5em;
@@ -92,6 +94,56 @@
             font-size: 1em;
             color: #333;
             flex: 1;
+        }
+        .info-card {
+            position: absolute;
+            right: 20px;
+            top: 100px;
+            width: 300px;
+            background-color: #e0f4ff;
+            border-radius: 8px;
+            padding: 20px;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .info-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #2a465e;
+        }
+        .info-card p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .info-card .app-link {
+            color: #2a465e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info-card .app-link:hover {
+            text-decoration: underline;
+        }
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            color: #2a465e;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 5;
         }
     </style>
 </head>
@@ -104,35 +156,119 @@
     <div class="content">
         <h2><span class="advice-icon">🔒</span>Protección contra fraudes: Consejos para evitar ser víctima de fraudes electrónicos.</h2>
 
-        <div class="advice">
+        <div class="advice" onclick="showInfo(1)">
             <span class="advice-icon">📂</span>
             <div class="advice-text">1. Guarda tus datos en un lugar seguro: Utiliza almacenamiento en la nube con un gestor de contraseñas para proteger tu información sensible.</div>
         </div>
 
-        <div class="advice">
+        <div class="advice" onclick="showInfo(2)">
             <span class="advice-icon">👤</span>
             <div class="advice-text">2. Protege tus cuentas en línea: Usa contraseñas fuertes, únicas y autenticación multifactor para asegurar tus cuentas y evitar fraudes.</div>
         </div>
 
-        <div class="advice">
+        <div class="advice" onclick="showInfo(3)">
             <span class="advice-icon">🔍</span>
             <div class="advice-text">3. Limpia tu huella digital: Elimina cuentas antiguas, ajusta la privacidad de redes sociales y borra datos personales de sitios de búsqueda.</div>
         </div>
 
-        <div class="advice">
+        <div class="advice" onclick="showInfo(4)">
             <span class="advice-icon">📧</span>
             <div class="advice-text">4. Detecta fraudes de phishing: Identifica señales de estafas, como urgencia, ofertas sospechosas y solicitudes de información personal.</div>
         </div>
 
-        <div class="advice">
+        <div class="advice" onclick="showInfo(5)">
             <span class="advice-icon">💳</span>
             <div class="advice-text">5. No almacenes la información de tu tarjeta de crédito en sitios web: Evita guardar datos de tarjetas en sitios de compras para prevenir fraudes.</div>
         </div>
 
-        <div class="advice">
+        <div class="advice" onclick="showInfo(6)">
             <span class="advice-icon">🔐</span>
             <div class="advice-text">6. No compartas información confidencial de forma insegura: Usa un gestor de contraseñas con cifrado al compartir información sensible.</div>
         </div>
+
+        <div class="overlay" id="overlay" onclick="hideInfo()"></div>
+        
+        <div class="info-card" id="infoCard">
+            <button class="close-button" onclick="hideInfo()">✖</button>
+            <h3 id="infoTitle"></h3>
+            <p id="infoContent"></p>
+            <p id="appLinks"></p>
+        </div>
     </div>
+
+    <script>
+        function showInfo(id) {
+            const infoCard = document.getElementById('infoCard');
+            const overlay = document.getElementById('overlay');
+            const infoTitle = document.getElementById('infoTitle');
+            const infoContent = document.getElementById('infoContent');
+            const appLinks = document.getElementById('appLinks');
+            
+            const infoData = {
+                1: {
+                    title: "Guarda tus datos en un lugar seguro",
+                    content: "Utiliza almacenamiento seguro en la nube para mantener protegida tu información sensible y accesible solo a ti.",
+                    apps: [
+                        { name: "Google Drive", url: "https://www.google.com/drive/" },
+                        { name: "Dropbox", url: "https://www.dropbox.com/" }
+                    ]
+                },
+                2: {
+                    title: "Protege tus cuentas en línea",
+                    content: "Configura contraseñas seguras y únicas, y usa autenticación multifactor para mayor seguridad.",
+                    apps: [
+                        { name: "Authy", url: "https://authy.com/" },
+                        { name: "Microsoft Authenticator", url: "https://www.microsoft.com/en-us/security/mobile-authenticator-app" }
+                    ]
+                },
+                3: {
+                    title: "Limpia tu huella digital",
+                    content: "Elimina perfiles antiguos y revisa las configuraciones de privacidad en redes sociales para proteger tus datos.",
+                    apps: [
+                        { name: "Jumbo Privacy", url: "https://www.jumboprivacy.com/" },
+                        { name: "DeleteMe", url: "https://joindeleteme.com/" }
+                    ]
+                },
+                4: {
+                    title: "Detecta fraudes de phishing",
+                    content: "Evita hacer clic en enlaces sospechosos y no proporciones información personal en respuesta a correos o mensajes desconocidos.",
+                    apps: [
+                        { name: "Canary Mail", url: "https://canarymail.io/" },
+                        { name: "Mailwasher", url: "https://www.mailwasher.net/" }
+                    ]
+                },
+                5: {
+                    title: "No almacenes la información de tu tarjeta de crédito en sitios web",
+                    content: "Es más seguro introducir manualmente la información de tu tarjeta en cada compra.",
+                    apps: [
+                        { name: "Privacy.com", url: "https://privacy.com/" }
+                    ]
+                },
+                6: {
+                    title: "No compartas información confidencial de forma insegura",
+                    content: "Usa un gestor de contraseñas con cifrado al compartir información sensible.",
+                    apps: [
+                        { name: "LastPass", url: "https://www.lastpass.com/" },
+                        { name: "1Password", url: "https://1password.com/" }
+                    ]
+                }
+            };
+
+            const selectedInfo = infoData[id];
+            infoTitle.textContent = selectedInfo.title;
+            infoContent.textContent = selectedInfo.content;
+
+            // Generar los enlaces para las aplicaciones
+            appLinks.innerHTML = selectedInfo.apps.map(app => `<a href="${app.url}" class="app-link" target="_blank">${app.name}</a>`).join(", ");
+            
+            infoCard.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function hideInfo() {
+            document.getElementById('infoCard').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
